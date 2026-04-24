@@ -7,6 +7,7 @@ import HeroCEO from "./components/HeroCEO";
 import Consultant from "./components/Consultant";
 import Book  from "./components/Book";
 import Testimonials from "./components/Testimonials";
+import Ready from "./components/Ready";
 export default function Home() {
   return (
        <main className="min-h-screen overflow-x-hidden" >
@@ -23,16 +24,11 @@ export default function Home() {
         <Consultant/>
         <Book/>
         <Testimonials/>
+        <Ready/>
         <div >
 
           {/*className="max-w-[1280px] mx-auto px-4 md:px-8 lg:px-16"*/}
-     
-        <section>{/* Hero */}</section>
-        <section>{/* Profile */}</section>
-        <section>{/* Features */}</section>
-        <section>{/* Content Blocks */}</section>
-        <section>{/* CTA */}</section>
-        <footer>{/* Footer */}</footer>
+    
       </div>
       
     </main>

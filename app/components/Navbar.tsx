@@ -42,7 +42,7 @@ const Navbar = () => {
     /></span>
       </button>
 
-      <button className="px-4 py-2 bg-[#E8294A] text-white text-sm font-medium">
+      <button className="px-4 py-[15px] bg-[#E8294A] text-white text-sm font-medium">
         Take Assessment
       </button>
 
