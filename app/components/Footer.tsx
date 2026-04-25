@@ -57,29 +57,33 @@ function FooterColumn({ title, items }: { title: string; items: string[] }) {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#11040E]">
-      
+    <footer className="bg-[#11040E] text-white">
 
+      {/* TOP DIVIDER */}
       <div className="mx-6 md:mx-10 border-t border-white" />
 
-      {/* Main grid */}
-      <div className="px-6 text-white  md:px-10 py-8 md:py-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-        {/* Brand */}
+      {/* MAIN GRID */}
+      <div className="px-6 md:px-10 py-8 md:py-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
+        {/* BRAND */}
         <div>
-            <div className="flex items-center justify-left rounded-full bg-brand">
-              <span>
-                <Image src="/icons/logo.svg" alt="Tobams Group logo" width={188} height={73} />
-              </span>
-            </div>
+          <div className="flex items-center">
+            <Image
+              src="/icons/logo.svg"
+              alt="Tobams Group logo"
+              width={188}
+              height={73}
+            />
+          </div>
 
           <p className="mt-5 text-[14px] md:text-[15px]">
             Tobams Group is an innovative consultancy firm reshaping the future of tech talent development in Africa.
           </p>
 
-          {/* Socials */}
+          {/* SOCIALS */}
           <div className="mt-5 flex items-center gap-3">
             <a className="flex h-10 w-10 items-center justify-center rounded-full bg-card">
-              <Image src="/icons/linkedin.svg" alt="LinkedIn" width={40} height={40} />
+              <Image src="/icons/linkedIn.svg" alt="LinkedIn" width={40} height={40} />
             </a>
 
             <a className="flex h-10 w-10 items-center justify-center rounded-full bg-card">
@@ -97,13 +101,16 @@ export default function Footer() {
         <FooterColumn title="Solution" items={solution} />
       </div>
 
-       <div className="mx-6 md:mx-10 border-t border-white" />
+      {/* DIVIDER */}
+      <div className="mx-6 md:mx-10 border-t border-white" />
 
-      {/* Contact */}
-     <div>
-       <div className="mx-6 mt-6 mb-6 md:mx-10 rounded-2xl bg-[#24061d] text-white p-5 md:p-7">
+      {/* CONTACT SECTION */}
+      <div className="mx-6 mt-6 mb-6 md:mx-10 rounded-2xl bg-[#24061d] p-5 md:p-7">
 
-         <div>
+        <div className="grid gap-6 md:grid-cols-3 md:gap-10">
+
+          {/* COLUMN 1 — CONTACT */}
+          <div>
             <h3 className="text-[18px] font-semibold">Contact</h3>
 
             <ul className="mt-4 space-y-3 text-[14px]">
@@ -116,63 +123,80 @@ export default function Footer() {
 
               <li className="flex items-center gap-3">
                 <Image src="/icons/phone.svg" alt="Phone" width={18} height={18} />
-                <a href="tel:+447886600748">+447886600748</a>
+                <a href="tel:+447886600748">
+                  +447886600748
+                </a>
               </li>
             </ul>
           </div>
 
-        <div className="grid mt-4 gap-6 md:grid-cols-3 md:gap-10">
+          {/* COLUMN 2 — UK */}
           <div>
             <h3 className="text-[18px] font-semibold">Registered Offices</h3>
-            <p className="font-semibold text-red-500 mt-4">United Kingdom</p>
-            <p className="text-[13px] md:text-[14px] ">
-              07451196 (Registered by Company House) Vine Cottages, 215 North Street, Romford, Essex, United Kingdom, RM1 4QA.
+
+            <p className="font-semibold text-red-500 mt-4">
+              United Kingdom
+            </p>
+
+            <p className="text-[13px] md:text-[14px] mt-1">
+              07451196 (Registered by Company House) Vine Cottages, 215 North Street,
+              Romford, Essex, United Kingdom, RM1 4QA.
             </p>
           </div>
 
-          <div className="md:mt-9">
-            <p className="font-semibold text-red-500">Nigeria</p>
-            <p className="mt-1 text-[13px] md:text-[14px]">
-             RC 1048722 (Registered by the Corporate Affairs Commission) 4, Muaz Close, Angwari-Rimi
+          {/* COLUMN 3 — NIGERIA */}
+          <div>
+            <p className="font-semibold text-red-500 mt-9 md:mt-10">
+              Nigeria
+            </p>
+
+            <p className="text-[13px] md:text-[14px] mt-1">
+              RC 1048722 (Registered by the Corporate Affairs Commission) 4, Muaz Close, Angwari-Rimi
             </p>
           </div>
 
         </div>
       </div>
 
-      {/* Legal */}
+      {/* DIVIDER */}
+      <div className="mx-6 md:mx-10 border-t border-white" />
 
-       <div className="mx-6 md:mx-10 border-t border-white" />
+   {/* LEGAL */}
+<div className="px-6 md:px-10 py-8 text-[14px]">
 
-     <div className="px-10 text-white md:px-10 py-8 flex flex-col items-center text-center gap-6 text-[14px] md:text-[14px]">
+  <div className="flex flex-col items-center text-center gap-6 
+                  md:flex-row md:justify-between md:items-center md:text-left">
 
- <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-center">
-  
-  <a href="#" className="underline whitespace-nowrap">
-    Privacy Policy
-  </a>
+    {/* LEFT — COPYRIGHT */}
+    <p className="order-2 md:order-1">
+      Copyright © Tobams Group, 2024. All{" "}
+      <br className="md:hidden" />
+      rights reserved.
+    </p>
 
-  <a href="#" className="underline whitespace-nowrap">
-    Cookies Policies
-  </a>
+    {/* RIGHT — LINKS */}
+    <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 
+                    md:justify-end md:order-2">
 
-  <a
-    href="#"
-    className="underline whitespace-nowrap w-full text-center md:w-auto"
-  >
-    Terms and Conditions
-  </a>
+      <a href="#" className="underline whitespace-nowrap">
+        Privacy Policy
+      </a>
 
-</div>
+      <a href="#" className="underline whitespace-nowrap">
+        Cookies Policies
+      </a>
 
-<p className="text-center">
-  Copyright © Tobams Group, 2024. All{" "}
-  <br className="md:hidden" />
-  rights reserved.
-</p>
+      <a
+        href="#"
+        className="underline whitespace-nowrap w-full text-center md:w-auto"
+      >
+        Terms and Conditions
+      </a>
 
-</div>
-     </div>
-    </footer>
+    </div>
+
+  </div>
+
+</div>    </footer>
   );
 }

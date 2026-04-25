@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tobams Frontend Intern Assessment
 
-## Getting Started
+This project is a pixel-perfect implementation of the provided Figma design using Next.js (App Router) and Tailwind CSS.
 
-First, run the development server:
+It focuses on responsive layout, semantic structure, and clean component architecture.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js (App Router)
+- Tailwind CSS
+- TypeScript
+- next/image for image optimization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run locally:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository
+2. cd into the repository
+3. Install dependencies with: npm install
+4. Run the development server: npm run dev
+5. Open in browser: http://localhost:3000
 
-## Learn More
+Figma link:
+https://www.figma.com/design/wuqCLkK1feTgB6xxSRRwZu/Frontend-Intern-Assessment?node-id=0-1&p=f&t=wTmwlcwVFmzlVW0v-0
 
-To learn more about Next.js, take a look at the following resources:
+Public Github link:
+https://github.com/Jojololami/oyin_tobams_project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+My live link:
+https://oyintobamsproject.vercel.app/
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Design decision:
 
-## Deploy on Vercel
+- For the hero section with a man and woman staring at the camera, I had to place the Learn More button outside the card containing the text for the mobile view because it was difficult to keep the button inside for mobile view and outiside for the desktop view, so I stuck with one.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Some spacing, colours and font sizes were approximated.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Tailwind utility classes were used exclusively (no custom CSS) to meet requirements.
+
+- Flexbox and Grid were combined for responsive layouts depending on complexity.
+
+- Certain text wrapping behaviors (e.g., footer legal links) were handled using responsive utilities like `whitespace-nowrap` and `md:w-auto`.
+
+- Image proportions were maintained using `object-cover` to preserve visual consistency.
+
+AI DISCLOSURE:
+I used ChatGPT to aid my debugging process.
